@@ -1,0 +1,256 @@
+2016-12-22 00:36:48,866 [19956] DEBUG Servicesys_user - 获取实体对象
+2016-12-22 00:36:48,879 [19956] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-22 00:36:48,936 [19956] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-22 21:05:38,614 [5828] DEBUG Servicesys_user - 获取实体对象
+2016-12-22 21:05:38,679 [5828] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-22 21:05:38,714 [5828] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-22 21:48:25,497 [960] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-22 21:48:25,559 [960] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-22 21:48:25,691 [960] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-22 21:48:25,715 [960] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-22 21:48:25,770 [960] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-22 21:48:25,782 [960] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-22 21:50:02,597 [6092] DEBUG Servicesys_user - 获取实体对象
+2016-12-22 21:50:02,603 [6092] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'super'and Password =  '1234'and IsEnable =  'True'
+2016-12-22 21:50:33,825 [6516] DEBUG Servicesys_user - 获取实体对象
+2016-12-22 21:50:33,826 [6516] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'super'and Password =  'xxj'and IsEnable =  'True'
+2016-12-22 21:50:33,875 [6516] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'super' 
+2016-12-22 21:50:33,897 [6516] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('super','许薛军','170KOLDN5WNNJFX','localhost','广东省深圳市','2016/12/22 21:50:33')
+2016-12-22 21:50:33,901 [6516] DEBUG Servicemms_project - 获取实体对象
+2016-12-22 21:50:33,901 [6516] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2016-12-22 21:50:33,931 [5272] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-22 21:50:35,457 [4456] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-22 21:50:40,167 [5272] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2016-12-22 21:50:40,173 [5272] DEBUG Servicesys_organize - 获取实体列表
+2016-12-22 21:50:40,174 [5272] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-22 21:50:44,626 [5272] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/backup/Index','/Sys/backup')
+2016-12-22 21:50:46,938 [6516] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-22 21:50:48,295 [6008] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-22 21:50:48,828 [4456] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-22 21:50:48,828 [4456] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-22 21:50:48,851 [4456] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-22 21:50:53,420 [6008] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/code/Index','/Sys/code')
+2016-12-22 21:50:53,985 [4456] DEBUG Servicesys_codeType - 获取动态列表
+2016-12-22 21:50:53,986 [4456] DEBUG Sys - select sys_codeType.* from sys_codeType order by Seq,CodeType
+2016-12-22 21:50:54,057 [5272] DEBUG Servicesys_code - 获取实体列表
+2016-12-22 21:50:54,058 [5272] DEBUG Sys - select top 20 sys_code.* from sys_code order by Seq
+2016-12-22 21:50:54,069 [5272] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code ) tb_temp
+2016-12-22 21:50:55,732 [6516] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-22 21:50:55,953 [5272] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-22 21:50:55,953 [5272] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-22 21:50:55,954 [5272] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-22 21:50:59,371 [6008] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2016-12-22 21:50:59,387 [6008] DEBUG Servicesys_user - 获取动态列表
+2016-12-22 21:50:59,387 [6008] DEBUG Sys - select UserCode,UserName from sys_user
+2016-12-22 21:50:59,387 [6008] DEBUG Servicesys_organize - 获取动态列表
+2016-12-22 21:50:59,387 [6008] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2016-12-22 21:50:59,833 [4456] DEBUG Servicesys_role - 获取实体列表
+2016-12-22 21:50:59,833 [4456] DEBUG Sys - select sys_role.* from sys_role order by RoleSeq
+2016-12-22 21:51:02,764 [6516] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2016-12-22 21:51:02,769 [6516] DEBUG Servicesys_organize - 获取实体列表
+2016-12-22 21:51:02,769 [6516] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-22 21:51:04,776 [6720] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-22 21:51:05,488 [6516] DEBUG Servicesys_menu - 获取动态列表
+2016-12-22 21:51:05,488 [6516] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-22 21:51:08,984 [6720] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2016-12-22 21:51:08,986 [6720] DEBUG Servicesys_organize - 获取实体列表
+2016-12-22 21:51:08,986 [6720] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-22 21:52:02,528 [6720] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-22 21:52:02,751 [5272] DEBUG Servicesys_menu - 获取动态列表
+2016-12-22 21:52:02,752 [5272] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-22 21:52:04,047 [6720] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2016-12-22 21:52:04,057 [6720] DEBUG Servicesys_organize - 获取实体列表
+2016-12-22 21:52:04,057 [6720] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-22 21:52:08,696 [6516] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-22 21:52:08,917 [6720] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-22 21:52:08,918 [6720] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-22 21:52:08,919 [6720] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-22 21:52:10,028 [6720] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/code/Index','/Sys/code')
+2016-12-22 21:52:10,239 [5272] DEBUG Servicesys_codeType - 获取动态列表
+2016-12-22 21:52:10,240 [5272] DEBUG Sys - select sys_codeType.* from sys_codeType order by Seq,CodeType
+2016-12-22 21:52:10,307 [6720] DEBUG Servicesys_code - 获取实体列表
+2016-12-22 21:52:10,307 [6720] DEBUG Sys - select top 20 sys_code.* from sys_code order by Seq
+2016-12-22 21:52:10,308 [6720] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code ) tb_temp
+2016-12-22 21:52:14,531 [6516] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/user/Index','/Sys/user')
+2016-12-22 21:52:14,987 [6008] DEBUG Servicesys_organize - 获取实体列表
+2016-12-22 21:52:14,987 [6008] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-22 21:52:15,102 [6720] DEBUG Servicesys_user - 获取实体列表
+2016-12-22 21:52:15,102 [6720] DEBUG Sys - select top 20 sys_user.* from sys_user order by UserSeq
+2016-12-22 21:52:15,111 [6720] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user ) tb_temp
+2016-12-22 21:52:26,167 [6516] DEBUG Servicesys_user - 获取实体列表
+2016-12-22 21:52:26,168 [6516] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0104'))) order by UserSeq
+2016-12-22 21:52:26,212 [6516] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0104'))) ) tb_temp
+2016-12-22 21:52:27,365 [6008] DEBUG Servicesys_user - 获取实体列表
+2016-12-22 21:52:27,365 [6008] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0107'))) order by UserSeq
+2016-12-22 21:52:27,383 [6008] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0107'))) ) tb_temp
+2016-12-22 21:52:27,936 [5272] DEBUG Servicesys_user - 获取实体列表
+2016-12-22 21:52:27,936 [5272] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0110'))) order by UserSeq
+2016-12-22 21:52:27,952 [5272] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0110'))) ) tb_temp
+2016-12-22 21:52:28,377 [6720] DEBUG Servicesys_user - 获取实体列表
+2016-12-22 21:52:28,377 [6720] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0112'))) order by UserSeq
+2016-12-22 21:52:28,394 [6720] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0112'))) ) tb_temp
+2016-12-22 21:52:28,766 [3800] DEBUG Servicesys_user - 获取实体列表
+2016-12-22 21:52:28,767 [3800] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0114'))) order by UserSeq
+2016-12-22 21:52:28,786 [3800] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','0114'))) ) tb_temp

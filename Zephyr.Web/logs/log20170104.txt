@@ -1,0 +1,292 @@
+2017-01-04 22:24:46,364 [7928] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:24:46,479 [7928] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:24:46,587 [7928] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:24:46,628 [7928] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:24:46,695 [7928] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:24:46,710 [7928] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:25:24,616 [6968] DEBUG Servicesys_user - 获取实体对象
+2017-01-04 22:25:24,623 [6968] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'super'and Password =  'xxj'and IsEnable =  'True'
+2017-01-04 22:25:24,676 [6968] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'super' 
+2017-01-04 22:25:24,719 [6968] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('super','许薛军','170KOLDN5WNNJFX','localhost','广东省阳江市','2017/1/4 22:25:24')
+2017-01-04 22:25:24,723 [6968] DEBUG ServiceProjectInfo - 获取实体对象
+2017-01-04 22:25:24,723 [6968] DEBUG Pyn - select ProjectInfo.* from ProjectInfo where  ProjectCode =  'HZ2016353344571'
+2017-01-04 22:25:24,784 [6356] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 22:25:26,108 [8868] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 22:33:35,861 [4328] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:33:35,970 [4328] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:33:36,287 [4328] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:33:36,311 [4328] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:33:36,368 [4328] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:33:36,384 [4328] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:33:36,542 [9728] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 22:33:38,141 [10200] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 22:44:05,330 [4712] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:44:05,370 [4712] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:44:05,468 [4712] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:44:05,502 [4712] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:44:05,577 [4712] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:44:05,592 [4712] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:44:05,744 [8364] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 22:44:07,370 [10864] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 22:46:16,928 [10768] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:46:16,969 [10768] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:46:17,067 [10768] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:46:17,093 [10768] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:46:17,167 [10768] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:46:17,178 [10768] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:46:17,335 [8364] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 22:46:18,879 [8868] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 22:50:27,025 [4328] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:50:27,071 [4328] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:50:27,192 [4328] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:50:27,224 [4328] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:50:27,298 [4328] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:50:27,313 [4328] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:50:27,467 [10336] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 22:50:29,126 [10852] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 22:53:01,720 [7928] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:53:01,766 [7928] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:53:01,869 [7928] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:53:01,902 [7928] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:53:01,976 [7928] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:53:01,991 [7928] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:53:02,145 [10852] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 22:53:03,599 [8464] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 22:53:03,904 [10852] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Index','/Pyn/ImageUpload')
+2017-01-04 22:56:47,144 [11748] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:56:47,203 [11748] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:56:47,311 [11748] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:56:47,344 [11748] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:56:47,409 [11748] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:56:47,425 [11748] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 22:56:47,763 [12284] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 22:56:49,650 [11300] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 22:56:52,980 [12284] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Index','/Pyn/ImageUpload')
+2017-01-04 22:56:59,381 [12284] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')
+2017-01-04 22:59:36,858 [10828] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')
+2017-01-04 23:20:46,028 [12484] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:20:46,209 [12484] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:20:46,313 [12484] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:20:46,337 [12484] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:20:46,394 [12484] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:20:46,408 [12484] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:20:46,709 [13296] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 23:20:49,070 [13296] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 23:20:54,636 [8396] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Index','/Pyn/ImageUpload')
+2017-01-04 23:20:59,602 [13296] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')
+2017-01-04 23:29:14,191 [12144] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:29:14,240 [12144] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:29:14,357 [12144] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:29:14,389 [12144] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:29:14,447 [12144] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:29:14,465 [12144] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-04 23:29:14,802 [13408] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-04 23:29:16,661 [13440] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-04 23:29:26,275 [13440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Index','/Pyn/ImageUpload')
+2017-01-04 23:29:31,702 [13504] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')
+2017-01-04 23:31:25,830 [13912] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')
+2017-01-04 23:44:26,757 [12584] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')
+2017-01-04 23:47:44,713 [10572] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')
+2017-01-04 23:57:50,523 [12688] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')

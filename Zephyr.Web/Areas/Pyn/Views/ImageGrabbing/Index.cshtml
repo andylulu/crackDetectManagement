@@ -1,0 +1,31 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="VideoGrabbing" content="width=device-width" />
+    <title>图像抓取</title>
+    <script language=JavaScript>
+        function exec(command) {
+            window.oldOnError = window.onerror;
+            window._command = command;
+            window.onerror = function (err) {
+                if (err.indexOf('utomation') != -1) {
+                    alert('请更改你的IE的安全级别：开始->设置->控制面板->Internet选项->安全->自定义级别->对没有标记为安全的ActiveX控件进行初始化和脚本运行->启用。命令：' + window._command);
+                    return true;
+                }
+                else
+                    return false;
+            };
+            var wsh = new ActiveXObject("WScript.Shell");
+            if (wsh)
+                wsh.Run('QQ.exe');
+            wsh = null;
+            window.onerror = window.oldOnError;
+        }
+    </script>
+</head>
+<body>
+    @*<input type="button" value=" 登录 " onclick="exec('C:\\Users\\Administrator\\Documents\\Visual Studio 2013\\Projects\\WpfPylonControlS1\\WpfPylonControlS1\\bin\\x86\\Debug\\WpfPylonControlS1.exe')" />
+    *@
+    <a href="WebShell://">图像抓取</a>
+</body>
+</html>

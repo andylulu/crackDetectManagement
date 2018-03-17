@@ -1,0 +1,59 @@
+2018-03-16 21:44:21,608 [6376] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-03-16 21:44:21,712 [6376] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-03-16 21:44:21,846 [6376] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-03-16 21:44:21,900 [6376] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-03-16 21:44:22,049 [6376] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-03-16 21:44:22,061 [6376] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-03-16 21:45:04,871 [5920] DEBUG Servicesys_user - 获取实体对象
+2018-03-16 21:45:04,878 [5920] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'super'and Password =  'xxj'and IsEnable =  'True'
+2018-03-16 21:45:04,993 [5920] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'super' 
+2018-03-16 21:45:05,097 [5920] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('super','许薛军','170KOLDN5WNNJFX','localhost','湖北省黄冈市','2018/3/16 21:45:05')
+2018-03-16 21:45:05,123 [5920] DEBUG ServiceProjectInfo - 获取实体对象
+2018-03-16 21:45:05,123 [5920] DEBUG Pyn - select ProjectInfo.* from ProjectInfo where  ProjectCode =  'HZ2016353344571'
+2018-03-16 21:45:05,195 [5644] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2018-03-16 21:45:07,075 [6184] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2018-03-16 21:45:34,135 [5784] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageGrabbing/Index','/Pyn/ImageGrabbing')
+2018-03-16 21:45:34,153 [5784] DEBUG Servicesys_code - 获取动态列表
+2018-03-16 21:45:34,154 [5784] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'CamaraSerie'
+2018-03-16 21:45:34,162 [5784] DEBUG Servicesys_code - 获取动态列表
+2018-03-16 21:45:34,162 [5784] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'ImageGrabbing'
+2018-03-16 21:46:58,437 [6136] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Index','/Pyn/ImageUpload')
+2018-03-16 21:53:10,509 [6196] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2018-03-16 21:53:10,535 [6196] DEBUG Servicesys_organize - 获取实体列表
+2018-03-16 21:53:10,535 [6196] DEBUG Sys - select sys_organize.* from sys_organize

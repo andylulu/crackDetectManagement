@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4eef0194460842fd95dfc866445b2206" Name="关系图1">
+        <EntityTypeShape EntityType="MyImageServerModel.ImageInfo" Width="1.5" PointX="5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyImageServerModel.ImageServerInfo" Width="1.75" PointX="2.125" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="MyImageServerModel.FK_ImageInfo_ImageServerInfo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyImageServerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MyImageServerModelStoreContainer">
+    <EntitySet Name="ImageInfo" EntityType="MyImageServerModel.Store.ImageInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImageServerInfo" EntityType="MyImageServerModel.Store.ImageServerInfo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ImageInfo_ImageServerInfo" Association="MyImageServerModel.Store.FK_ImageInfo_ImageServerInfo">
+      <End Role="ImageServerInfo" EntitySet="ImageServerInfo" />
+      <End Role="ImageInfo" EntitySet="ImageInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ImageInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ImageName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ImageServerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ImageServerInfo">
+    <Key>
+      <PropertyRef Name="ServerId" />
+    </Key>
+    <Property Name="ServerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ServerName" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="ServerUrl" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="PicRootPath" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MaxPicAmount" Type="int" Nullable="false" />
+    <Property Name="CurPicAmount" Type="int" Nullable="false" />
+    <Property Name="FlgUsable" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ImageInfo_ImageServerInfo">
+    <End Role="ImageServerInfo" Type="MyImageServerModel.Store.ImageServerInfo" Multiplicity="1" />
+    <End Role="ImageInfo" Type="MyImageServerModel.Store.ImageInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ImageServerInfo">
+        <PropertyRef Name="ServerId" />
+      </Principal>
+      <Dependent Role="ImageInfo">
+        <PropertyRef Name="ImageServerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

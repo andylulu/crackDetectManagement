@@ -1,0 +1,47 @@
+2017-01-07 10:04:40,205 [8156] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-07 10:04:40,248 [8156] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-07 10:04:40,251 [8156] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-07 10:04:40,253 [8156] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-07 10:04:40,257 [8156] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-07 10:04:40,260 [8156] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-01-07 10:04:40,424 [8512] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-01-07 10:04:41,998 [3488] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2017-01-07 10:04:45,478 [5204] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Index','/Pyn/ImageUpload')
+2017-01-07 10:04:50,724 [8100] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageUpload/Upload')
+2017-01-07 10:04:59,097 [5204] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/ImageGrabbing/Index','/Pyn/ImageGrabbing')
+2017-01-07 10:04:59,107 [5204] DEBUG Servicesys_code - 获取动态列表
+2017-01-07 10:04:59,113 [5204] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'CamaraSerie'
+2017-01-07 10:04:59,119 [5204] DEBUG Servicesys_code - 获取动态列表
+2017-01-07 10:04:59,119 [5204] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'ImageGrabbing'

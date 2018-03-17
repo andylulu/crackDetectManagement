@@ -1,0 +1,34 @@
+2017-05-06 16:10:27,100 [3992] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-05-06 16:10:27,289 [3992] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-05-06 16:10:27,415 [3992] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-05-06 16:10:27,465 [3992] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-05-06 16:10:27,569 [3992] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-05-06 16:10:27,594 [3992] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2017-05-06 16:13:01,742 [6260] DEBUG Servicesys_user - 获取实体对象
+2017-05-06 16:13:01,755 [6260] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'xxj'and Password =  'xxj'and IsEnable =  'True'
+2017-05-06 16:17:08,418 [2360] DEBUG Servicesys_user - 获取实体对象
+2017-05-06 16:17:08,421 [2360] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'super'and Password =  'xxj'and IsEnable =  'True'
+2017-05-06 16:17:08,570 [2360] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'super' 
+2017-05-06 16:17:08,753 [2360] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('super','许薛军','170KOLDN5WNNJFX','localhost','湖北省武汉市','2017/5/6 16:17:08')
+2017-05-06 16:17:08,800 [2360] DEBUG ServiceProjectInfo - 获取实体对象
+2017-05-06 16:17:08,850 [2360] DEBUG Pyn - select ProjectInfo.* from ProjectInfo where  ProjectCode =  'HZ2016353344571'
+2017-05-06 16:17:08,907 [6324] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2017-05-06 16:17:10,635 [6676] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode

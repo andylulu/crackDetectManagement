@@ -1,0 +1,22 @@
+2016-12-19 00:07:15,532 [10872] DEBUG ServiceModelBase - 获取动态列表
+2016-12-19 00:07:15,543 [10872] DEBUG Mms - select top 20 
+    ProjectName as text,ProjectCode as value
+   from 
+    mms_project
+   order by ProjectCode
+2016-12-19 00:07:32,445 [10872] DEBUG Mms - select count(*) from ( select 
+    ProjectName as text,ProjectCode as value
+   from 
+    mms_project
+   ) tb_temp
+2016-12-19 00:52:15,516 [4124] DEBUG ServiceModelBase - 获取动态列表
+2016-12-19 00:52:15,516 [4124] DEBUG Mms - select top 20 
+    ProjectName as text,ProjectCode as value
+   from 
+    mms_project
+   order by ProjectCode
+2016-12-19 00:52:16,712 [4124] DEBUG Mms - select count(*) from ( select 
+    ProjectName as text,ProjectCode as value
+   from 
+    mms_project
+   ) tb_temp

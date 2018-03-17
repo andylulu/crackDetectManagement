@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript">
+       
+        var viewModel = function () {
+            var self = this;
+            this.form = { BackupDate: ko.observable() };
+            this.backup = {
+                size: { w: 6, h: 123 },
+                url: "/api/sys/backup/getsystembackup",
+                queryParams: ko.observable(),
+                pagination: true
+            };
+            this.refreshClick = function () {
+                //com.message('success', '刷新！');
+                window.location.reload();
+            };
+            
+            this.addClick = function () {
+                com.message('success', '备份！');
+                //window.location.reload();
+                $.ajax({
+                    url: '/api/sys/backup',
+                    type: 'POST',
+                    contentType: "application/json",
+                    data: ko.toJSON(this.form),
+                    success: function (r) {
+                        com.message('success', '备份数据库成功！注意查看');
+                    },
+                    error: function (e) {
+                        com.message('error', e.responseText);
+                    }
+                });
+                
+            };
+            this.searchClick = function () {
+                //com.message('success', '查询！');
+                this.backup.queryParams(ko.toJS(this.form));
+            };
+            this.clearClick = function () {
+                this.form.BackupDate("");
+                this.searchClick();
+            }
+        };
+
+        ko.bindingViewModel(new viewModel());
+    </script>
+}
+<div class="z-toolbar">
+    <a id="a_refresh" href="#" plain="true" class="easyui-linkbutton" icon="icon-arrow_refresh" title="刷新" data-bind="click:refreshClick">刷新</a>
+    <a id="a_add" href="#" plain="true" class="easyui-linkbutton" icon="icon-database_save" title="备份" data-bind="click:addClick">备份数据库</a>
+</div>
+
+<div id="condition" class="container_12" style="position:relative;height:50px;">
+    <div class="clear" style="height:13px;"></div>
+
+    <div class="grid_1 lbl">备份日期</div>
+    <div class="grid_2 val"><input type="text" data-bind="value:form.BackupDate" class="z-txt easyui-daterange" /></div>
+
+    <div class="prefix_9" style="position:absolute;top:5px;height:0;">
+        <a id="a_search" href="#" class="buttonHuge button-blue" style="margin:0 15px;" data-bind="click:searchClick">查询</a>
+        <a id="a_reset" href="#" class="buttonHuge button-blue" data-bind="click:clearClick">清空</a>
+    </div>
+</div>
+
+<div id="tt" class="easyui-tabs">
+    <div title="数据库备份文件">
+        <table data-bind="datagrid:backup">
+            <thead>
+                <tr>
+                    <th field="filename" align="center" width="150">备份文件   </th>
+                    <th field="size" align="center" width="100">文件大小   </th>
+                   <!--<th field="id" hidden="true">     </th>-->
+                </tr>
+            </thead>
+        </table>
+    </div>
+   
+</div>

@@ -1,0 +1,2683 @@
+2016-12-23 00:05:19,269 [5368] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 00:05:19,313 [5368] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 00:05:19,424 [5368] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 00:05:19,456 [5368] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 00:05:19,460 [5368] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 00:05:19,465 [5368] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 00:05:19,607 [6940] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/log/Index','/Sys/log')
+2016-12-23 00:05:21,600 [9192] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 00:05:21,600 [5332] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 00:05:21,607 [5332] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     order by A.ID desc
+2016-12-23 00:05:21,609 [9192] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     order by A.ID desc
+2016-12-23 00:05:21,731 [5332] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     ) tb_temp
+2016-12-23 00:05:21,732 [9192] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     ) tb_temp
+2016-12-23 00:44:27,296 [5332] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/generator/Index','/Sys/generator')
+2016-12-23 00:44:48,205 [5332] DEBUG Pyn - SELECT Name as TableName FROM sys.tables order by Name
+2016-12-23 00:44:48,210 [6940] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('undefined')
+ORDER BY sys.columns.column_id
+2016-12-23 00:44:48,384 [8408] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('undefined')
+ORDER BY sys.columns.column_id
+2016-12-23 00:45:53,789 [6940] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:45:53,838 [6940] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:47:39,725 [9192] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:47:39,773 [8408] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:50:30,622 [5332] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:50:30,661 [9192] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:50:30,677 [5332] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:50:30,708 [8408] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:50:45,009 [5332] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:50:45,021 [8408] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:10,705 [9192] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:13,519 [9192] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:13,547 [9192] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:13,579 [8408] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:13,593 [9192] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:15,221 [8408] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:15,236 [5332] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:15,259 [6940] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:15,274 [8408] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraInfo')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:20,863 [6940] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 00:51:20,887 [9192] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 01:38:00,917 [6940] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 01:38:00,955 [6940] DEBUG Pyn - sp_pkeys 'CamaraType'
+2016-12-23 01:39:09,587 [5332] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 01:39:09,592 [5332] DEBUG Pyn - sp_pkeys 'CamaraType'
+2016-12-23 01:40:39,214 [8936] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 01:40:39,408 [8936] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 01:40:39,551 [8936] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 01:40:39,582 [8936] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 01:40:39,638 [8936] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 01:40:39,721 [8936] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 01:40:40,457 [1572] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 01:40:43,351 [5196] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 01:43:50,232 [5196] DEBUG Pyn - 
+SELECT	sys.columns.name						AS ColumnName, 
+		type_name(sys.columns.system_type_id)	AS SqlTypeName,
+		sys.columns.max_length					AS MaxLength,
+		sys.columns.is_nullable					AS IsNullable,
+		sys.columns.is_identity					AS IsIdentity,
+		(case when exists(select 1  
+						 from   syscolumns 
+						 join   sysindexkeys on syscolumns.id  =sysindexkeys.id and syscolumns.colid=sysindexkeys.colid and syscolumns.id=sys.columns.object_id 
+						 join   sysindexes   on syscolumns.id  =sysindexes.id   and sysindexkeys.indid=sysindexes.indid   
+						 join   sysobjects   on sysindexes.name=sysobjects.name and sysobjects.xtype= 'PK '
+						 where syscolumns.name = sys.columns.name) then 1 else 0 end) AS IsPrimaryKey,
+		(select value from sys.extended_properties where sys.extended_properties.major_id = sys.columns.object_id and sys.extended_properties.minor_id = sys.columns.column_id) as Description
+FROM sys.columns    
+WHERE sys.columns.object_id = object_id('CamaraType')
+ORDER BY sys.columns.column_id
+2016-12-23 01:43:50,290 [5196] DEBUG Pyn - sp_pkeys 'CamaraType'
+2016-12-23 20:36:50,400 [6396] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:36:50,493 [6396] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:36:50,611 [6396] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:36:50,643 [6396] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:36:50,683 [6396] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:36:50,711 [6396] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:36:58,067 [7416] DEBUG Servicesys_user - 获取实体对象
+2016-12-23 20:36:58,073 [7416] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'super'and Password =  'xxj'and IsEnable =  'True'
+2016-12-23 20:36:58,225 [7416] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'super' 
+2016-12-23 20:36:58,272 [7416] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('super','许薛军','170KOLDN5WNNJFX','localhost','广东省深圳市','2016/12/23 20:36:58')
+2016-12-23 20:36:58,277 [7416] DEBUG Servicemms_project - 获取实体对象
+2016-12-23 20:36:58,277 [7416] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2016-12-23 20:36:58,329 [7416] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 20:36:59,438 [7416] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 20:38:08,749 [7416] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-23 20:38:09,622 [7292] DEBUG Servicesys_menu - 获取动态列表
+2016-12-23 20:38:09,622 [7292] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-23 20:39:19,083 [4676] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 20:39:19,606 [6884] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 20:39:19,606 [6884] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 20:39:19,634 [6884] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 20:52:21,123 [6396] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:52:21,170 [6396] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:52:21,276 [6396] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:52:21,309 [6396] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:52:21,356 [6396] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:52:21,371 [6396] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:52:21,528 [3696] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 20:52:22,938 [1548] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 20:53:55,524 [6516] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:53:55,585 [6516] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:53:55,694 [6516] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:53:55,727 [6516] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:53:55,766 [6516] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:53:55,794 [6516] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 20:53:55,949 [2332] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 20:53:57,356 [2224] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 20:56:45,496 [1548] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 20:56:45,631 [3696] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 20:57:02,295 [1548] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-23 20:57:03,098 [2224] DEBUG Servicesys_menu - 获取动态列表
+2016-12-23 20:57:03,104 [2224] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-23 20:57:44,038 [3696] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/permission/Index','/Sys/permission')
+2016-12-23 20:57:44,448 [1548] DEBUG Servicesys_permission - 获取动态列表
+2016-12-23 20:57:44,449 [1548] DEBUG Sys - select A.*,B.PermissionName as ParentName from sys_permission A left join sys_permission B on B.PermissionCode = A.ParentCode
+2016-12-23 20:57:46,500 [2224] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2016-12-23 20:57:46,515 [2224] DEBUG Servicesys_organize - 获取实体列表
+2016-12-23 20:57:46,516 [2224] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-23 20:57:49,266 [2332] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/user/Index','/Sys/user')
+2016-12-23 20:57:49,665 [7648] DEBUG Servicesys_organize - 获取实体列表
+2016-12-23 20:57:49,665 [7648] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-23 20:57:49,814 [2332] DEBUG Servicesys_user - 获取实体列表
+2016-12-23 20:57:49,814 [2332] DEBUG Sys - select top 20 sys_user.* from sys_user order by UserSeq
+2016-12-23 20:57:49,824 [2332] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user ) tb_temp
+2016-12-23 20:57:52,852 [7648] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/code/Index','/Sys/code')
+2016-12-23 20:57:53,291 [2332] DEBUG Servicesys_codeType - 获取动态列表
+2016-12-23 20:57:53,291 [2332] DEBUG Sys - select sys_codeType.* from sys_codeType order by Seq,CodeType
+2016-12-23 20:57:53,369 [2224] DEBUG Servicesys_code - 获取实体列表
+2016-12-23 20:57:53,369 [2224] DEBUG Sys - select top 20 sys_code.* from sys_code order by Seq
+2016-12-23 20:57:53,383 [2224] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code ) tb_temp
+2016-12-23 20:57:54,920 [7648] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 20:57:55,345 [1548] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 20:57:55,346 [1548] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 20:57:55,353 [1548] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:06:16,555 [7780] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:06:16,569 [7780] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:06:16,708 [7780] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:06:16,733 [7780] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:06:16,777 [7780] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:06:16,790 [7780] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:06:16,937 [8076] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 21:06:17,637 [7480] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:06:17,643 [7480] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:06:17,654 [7480] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:06:36,588 [4216] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2016-12-23 21:06:36,603 [4216] DEBUG Servicesys_organize - 获取实体列表
+2016-12-23 21:06:36,603 [4216] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-23 21:06:37,500 [7624] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-23 21:06:37,707 [4216] DEBUG Servicesys_menu - 获取动态列表
+2016-12-23 21:06:37,708 [4216] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-23 21:06:38,777 [8076] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2016-12-23 21:06:38,795 [8076] DEBUG Servicesys_user - 获取动态列表
+2016-12-23 21:06:38,796 [8076] DEBUG Sys - select UserCode,UserName from sys_user
+2016-12-23 21:06:38,801 [8076] DEBUG Servicesys_organize - 获取动态列表
+2016-12-23 21:06:38,802 [8076] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2016-12-23 21:06:39,308 [7624] DEBUG Servicesys_role - 获取实体列表
+2016-12-23 21:06:39,309 [7624] DEBUG Sys - select sys_role.* from sys_role order by RoleSeq
+2016-12-23 21:24:13,096 [1800] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-23 21:24:13,317 [1864] DEBUG Servicesys_menu - 获取动态列表
+2016-12-23 21:24:13,317 [1864] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-23 21:24:32,008 [7736] DEBUG Sys - 
+select A.*,
+       case when B.ID is null then 0 else 1 end as Selected
+from sys_button A
+left join sys_menuButtonMap B on B.MenuCode = '1105' and B.ButtonCode = A.ButtonCode
+order by ButtonSeq
+2016-12-23 21:24:57,893 [7736] DEBUG Sys - 
+select A.*,
+       case when B.ID is null then 0 else 1 end as Selected
+from sys_button A
+left join sys_menuButtonMap B on B.MenuCode = '9911' and B.ButtonCode = A.ButtonCode
+order by ButtonSeq
+2016-12-23 21:25:02,453 [1864] DEBUG Servicesys_menu - 设置菜单按钮
+2016-12-23 21:25:02,464 [1864] DEBUG Sys - delete from sys_menuButtonMap where [MenuCode] = '9911'
+2016-12-23 21:25:02,468 [1864] DEBUG Sys - insert into sys_menuButtonMap([MenuCode],[ButtonCode]) values('9911','delete')
+2016-12-23 21:25:09,784 [1800] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 21:25:10,455 [7296] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 21:25:10,678 [7736] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 21:25:10,954 [7920] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:25:10,955 [7920] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:25:10,959 [7920] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:25:18,348 [1800] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-23 21:25:18,566 [7736] DEBUG Servicesys_menu - 获取动态列表
+2016-12-23 21:25:18,566 [7736] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-23 21:25:38,222 [1864] DEBUG Sys - 
+select A.*,
+       case when B.ID is null then 0 else 1 end as Selected
+from sys_button A
+left join sys_menuButtonMap B on B.MenuCode = '9911' and B.ButtonCode = A.ButtonCode
+order by ButtonSeq
+2016-12-23 21:25:42,153 [7296] DEBUG Servicesys_button - 获取实体列表
+2016-12-23 21:25:42,153 [7296] DEBUG Sys - select sys_button.* from sys_button order by ButtonSeq
+2016-12-23 21:26:34,608 [7736] DEBUG Sys - 
+select A.*,
+       case when B.ID is null then 0 else 1 end as Selected
+from sys_button A
+left join sys_menuButtonMap B on B.MenuCode = '9906' and B.ButtonCode = A.ButtonCode
+order by ButtonSeq
+2016-12-23 21:27:25,446 [1864] DEBUG Sys - 
+select A.*,
+       case when B.ID is null then 0 else 1 end as Selected
+from sys_button A
+left join sys_menuButtonMap B on B.MenuCode = '9911' and B.ButtonCode = A.ButtonCode
+order by ButtonSeq
+2016-12-23 21:29:25,234 [7920] DEBUG Servicesys_parameter - 编辑记录
+2016-12-23 21:32:27,248 [5784] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:32:27,300 [5784] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:32:27,418 [5784] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:32:27,442 [5784] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:32:27,489 [5784] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:32:27,500 [5784] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 21:32:27,635 [7952] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/Parameter/Index','/Sys/Parameter')
+2016-12-23 21:32:28,936 [6952] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:32:28,941 [6952] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:32:28,952 [6952] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:34:58,661 [6952] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/Parameter/Index','/Sys/Parameter')
+2016-12-23 21:34:58,977 [7920] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:34:58,977 [7920] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:34:58,978 [7920] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:37:18,673 [7704] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/Parameter/Index','/Sys/Parameter')
+2016-12-23 21:37:19,011 [7920] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:37:19,012 [7920] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:37:19,019 [7920] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:37:27,610 [7952] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 21:37:28,695 [7296] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 21:37:33,346 [7920] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 21:37:33,586 [7952] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:37:33,586 [7952] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:37:33,589 [7952] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:37:52,386 [7920] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 21:37:52,712 [7952] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:37:52,712 [7952] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:37:52,712 [7952] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:39:25,949 [6952] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 21:39:26,106 [7296] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 21:39:26,337 [7452] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 21:39:26,805 [6952] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:39:26,806 [6952] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:39:26,807 [6952] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:39:58,961 [7920] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 21:39:59,111 [6952] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 21:39:59,334 [7296] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 21:39:59,541 [7920] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:39:59,541 [7920] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:39:59,551 [7920] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:49:36,428 [7920] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 21:49:36,605 [7952] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 21:49:36,899 [4200] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 21:49:37,154 [7452] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 21:49:37,155 [7452] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 21:49:37,155 [7452] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 21:49:38,824 [7952] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-23 21:49:39,281 [7704] DEBUG Servicesys_menu - 获取动态列表
+2016-12-23 21:49:39,281 [7704] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-23 21:50:32,993 [7952] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2016-12-23 21:50:32,997 [7952] DEBUG Servicesys_user - 获取动态列表
+2016-12-23 21:50:32,998 [7952] DEBUG Sys - select UserCode,UserName from sys_user
+2016-12-23 21:50:33,016 [7952] DEBUG Servicesys_organize - 获取动态列表
+2016-12-23 21:50:33,016 [7952] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2016-12-23 21:50:33,553 [7296] DEBUG Servicesys_role - 获取实体列表
+2016-12-23 21:50:33,553 [7296] DEBUG Sys - select sys_role.* from sys_role order by RoleSeq
+2016-12-23 21:50:39,553 [4200] DEBUG Sys - select * from sys_button order by ButtonSeq
+2016-12-23 21:50:39,556 [4200] DEBUG Sys - select A.MenuName,A.MenuCode,A.ParentCode,A.IconClass as iconCls,B.MenuName as ParentName,(select 1 from sys_roleMenuMap tb_role where tb_role.RoleCode='super' and tb_role.MenuCode=A.MenuCode) as checked,(
+select case when max(tb1_accredit.ID) is null then -1 
+            when max(tb2_accredit.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_accredit
+left join sys_roleMenuButtonMap AS tb2_accredit ON tb2_accredit.MenuCode=tb1_accredit.MenuCode AND tb2_accredit.ButtonCode=tb1_accredit.ButtonCode AND tb2_accredit.RoleCode='super'
+where tb1_accredit.MenuCode = A.MenuCode and  tb1_accredit.ButtonCode = 'accredit'  
+)as 'btn_accredit' ,(
+select case when max(tb1_add.ID) is null then -1 
+            when max(tb2_add.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_add
+left join sys_roleMenuButtonMap AS tb2_add ON tb2_add.MenuCode=tb1_add.MenuCode AND tb2_add.ButtonCode=tb1_add.ButtonCode AND tb2_add.RoleCode='super'
+where tb1_add.MenuCode = A.MenuCode and  tb1_add.ButtonCode = 'add'  
+)as 'btn_add' ,(
+select case when max(tb1_audit.ID) is null then -1 
+            when max(tb2_audit.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_audit
+left join sys_roleMenuButtonMap AS tb2_audit ON tb2_audit.MenuCode=tb1_audit.MenuCode AND tb2_audit.ButtonCode=tb1_audit.ButtonCode AND tb2_audit.RoleCode='super'
+where tb1_audit.MenuCode = A.MenuCode and  tb1_audit.ButtonCode = 'audit'  
+)as 'btn_audit' ,(
+select case when max(tb1_browse.ID) is null then -1 
+            when max(tb2_browse.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_browse
+left join sys_roleMenuButtonMap AS tb2_browse ON tb2_browse.MenuCode=tb1_browse.MenuCode AND tb2_browse.ButtonCode=tb1_browse.ButtonCode AND tb2_browse.RoleCode='super'
+where tb1_browse.MenuCode = A.MenuCode and  tb1_browse.ButtonCode = 'browse'  
+)as 'btn_browse' ,(
+select case when max(tb1_copy.ID) is null then -1 
+            when max(tb2_copy.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_copy
+left join sys_roleMenuButtonMap AS tb2_copy ON tb2_copy.MenuCode=tb1_copy.MenuCode AND tb2_copy.ButtonCode=tb1_copy.ButtonCode AND tb2_copy.RoleCode='super'
+where tb1_copy.MenuCode = A.MenuCode and  tb1_copy.ButtonCode = 'copy'  
+)as 'btn_copy' ,(
+select case when max(tb1_delete.ID) is null then -1 
+            when max(tb2_delete.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_delete
+left join sys_roleMenuButtonMap AS tb2_delete ON tb2_delete.MenuCode=tb1_delete.MenuCode AND tb2_delete.ButtonCode=tb1_delete.ButtonCode AND tb2_delete.RoleCode='super'
+where tb1_delete.MenuCode = A.MenuCode and  tb1_delete.ButtonCode = 'delete'  
+)as 'btn_delete' ,(
+select case when max(tb1_download.ID) is null then -1 
+            when max(tb2_download.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_download
+left join sys_roleMenuButtonMap AS tb2_download ON tb2_download.MenuCode=tb1_download.MenuCode AND tb2_download.ButtonCode=tb1_download.ButtonCode AND tb2_download.RoleCode='super'
+where tb1_download.MenuCode = A.MenuCode and  tb1_download.ButtonCode = 'download'  
+)as 'btn_download' ,(
+select case when max(tb1_edit.ID) is null then -1 
+            when max(tb2_edit.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_edit
+left join sys_roleMenuButtonMap AS tb2_edit ON tb2_edit.MenuCode=tb1_edit.MenuCode AND tb2_edit.ButtonCode=tb1_edit.ButtonCode AND tb2_edit.RoleCode='super'
+where tb1_edit.MenuCode = A.MenuCode and  tb1_edit.ButtonCode = 'edit'  
+)as 'btn_edit' ,(
+select case when max(tb1_export.ID) is null then -1 
+            when max(tb2_export.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_export
+left join sys_roleMenuButtonMap AS tb2_export ON tb2_export.MenuCode=tb1_export.MenuCode AND tb2_export.ButtonCode=tb1_export.ButtonCode AND tb2_export.RoleCode='super'
+where tb1_export.MenuCode = A.MenuCode and  tb1_export.ButtonCode = 'export'  
+)as 'btn_export' ,(
+select case when max(tb1_import.ID) is null then -1 
+            when max(tb2_import.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_import
+left join sys_roleMenuButtonMap AS tb2_import ON tb2_import.MenuCode=tb1_import.MenuCode AND tb2_import.ButtonCode=tb1_import.ButtonCode AND tb2_import.RoleCode='super'
+where tb1_import.MenuCode = A.MenuCode and  tb1_import.ButtonCode = 'import'  
+)as 'btn_import' ,(
+select case when max(tb1_print.ID) is null then -1 
+            when max(tb2_print.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_print
+left join sys_roleMenuButtonMap AS tb2_print ON tb2_print.MenuCode=tb1_print.MenuCode AND tb2_print.ButtonCode=tb1_print.ButtonCode AND tb2_print.RoleCode='super'
+where tb1_print.MenuCode = A.MenuCode and  tb1_print.ButtonCode = 'print'  
+)as 'btn_print' ,(
+select case when max(tb1_refresh.ID) is null then -1 
+            when max(tb2_refresh.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_refresh
+left join sys_roleMenuButtonMap AS tb2_refresh ON tb2_refresh.MenuCode=tb1_refresh.MenuCode AND tb2_refresh.ButtonCode=tb1_refresh.ButtonCode AND tb2_refresh.RoleCode='super'
+where tb1_refresh.MenuCode = A.MenuCode and  tb1_refresh.ButtonCode = 'refresh'  
+)as 'btn_refresh' ,(
+select case when max(tb1_save.ID) is null then -1 
+            when max(tb2_save.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_save
+left join sys_roleMenuButtonMap AS tb2_save ON tb2_save.MenuCode=tb1_save.MenuCode AND tb2_save.ButtonCode=tb1_save.ButtonCode AND tb2_save.RoleCode='super'
+where tb1_save.MenuCode = A.MenuCode and  tb1_save.ButtonCode = 'save'  
+)as 'btn_save' ,(
+select case when max(tb1_search.ID) is null then -1 
+            when max(tb2_search.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_search
+left join sys_roleMenuButtonMap AS tb2_search ON tb2_search.MenuCode=tb1_search.MenuCode AND tb2_search.ButtonCode=tb1_search.ButtonCode AND tb2_search.RoleCode='super'
+where tb1_search.MenuCode = A.MenuCode and  tb1_search.ButtonCode = 'search'  
+)as 'btn_search' 
+from sys_menu as A
+left join sys_menu B on B.MenuCode = A.ParentCode
+where A.IsEnable = 1
+order by A.MenuSeq,A.MenuCode
+2016-12-23 21:50:39,577 [7952] DEBUG Servicesys_permission - 获取动态列表
+2016-12-23 21:50:39,608 [7952] DEBUG Sys - select A.*
+,case when B.PermissionCode is null then 0 else 1           end as checked
+,case when B.PermissionCode is null then 0 else B.IsDefault end as IsDefault from sys_permission A
+left join sys_rolePermissionMap B on B.RoleCode='super' and B.PermissionCode = A.PermissionCode 
+2016-12-23 21:50:39,637 [4200] DEBUG Sys - select * from sys_roleMenuColumnMap where RoleCode = 'super'
+2016-12-23 21:50:49,112 [7920] DEBUG Servicesys_role - 修改角色菜单权限
+2016-12-23 21:50:49,115 [7920] DEBUG Sys - delete from sys_roleMenuMap where [RoleCode] = 'super'
+2016-12-23 21:50:49,118 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','13')
+2016-12-23 21:50:49,119 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','1301')
+2016-12-23 21:50:49,121 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','99')
+2016-12-23 21:50:49,121 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9902')
+2016-12-23 21:50:49,121 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9903')
+2016-12-23 21:50:49,121 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9910')
+2016-12-23 21:50:49,122 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9904')
+2016-12-23 21:50:49,122 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9905')
+2016-12-23 21:50:49,122 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9906')
+2016-12-23 21:50:49,122 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9911')
+2016-12-23 21:50:49,122 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9907')
+2016-12-23 21:50:49,122 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9909')
+2016-12-23 21:50:49,123 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9908')
+2016-12-23 21:50:49,123 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','98')
+2016-12-23 21:50:49,123 [7920] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9810')
+2016-12-23 21:50:49,125 [7920] DEBUG Servicesys_role - 修改角色菜单按钮权限
+2016-12-23 21:50:49,126 [7920] DEBUG Sys - delete from sys_roleMenuButtonMap where [RoleCode] = 'super'
+2016-12-23 21:50:49,128 [7920] DEBUG Servicesys_role - 修改角色数据权限
+2016-12-23 21:50:49,128 [7920] DEBUG Sys - delete from sys_rolePermissionMap where [RoleCode] = 'super'
+2016-12-23 21:50:49,130 [7920] DEBUG Servicesys_role - 修改角色数据列权限
+2016-12-23 21:50:49,131 [7920] DEBUG Sys - delete from sys_roleMenuColumnMap where [RoleCode] = 'super'
+2016-12-23 21:50:52,507 [4200] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 21:50:52,665 [7452] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 21:50:52,889 [6952] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2016-12-23 21:50:52,890 [6952] DEBUG Servicesys_user - 获取动态列表
+2016-12-23 21:50:52,890 [6952] DEBUG Sys - select UserCode,UserName from sys_user
+2016-12-23 21:50:52,890 [6952] DEBUG Servicesys_organize - 获取动态列表
+2016-12-23 21:50:52,890 [6952] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2016-12-23 21:50:53,135 [4200] DEBUG Servicesys_role - 获取实体列表
+2016-12-23 21:50:53,135 [4200] DEBUG Sys - select sys_role.* from sys_role order by RoleSeq
+2016-12-23 21:50:56,306 [7296] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 21:50:56,314 [7296] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 21:50:56,315 [7296] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 21:51:35,222 [6952] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 21:51:35,229 [6952] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 21:51:35,229 [6952] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:01:16,561 [6396] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:01:16,572 [6396] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:01:16,708 [6396] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:01:16,739 [6396] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:01:16,744 [6396] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:01:16,747 [6396] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:01:16,905 [3764] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:01:18,339 [7296] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:01:18,519 [3764] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:01:18,524 [3764] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:01:18,530 [3764] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:01:21,859 [4380] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:01:21,860 [4380] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:01:21,860 [4380] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:01:56,497 [3764] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:01:56,499 [3764] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:01:56,499 [3764] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:01:59,020 [4380] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:01:59,021 [4380] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:01:59,021 [4380] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:02:13,257 [4380] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:02:13,258 [4380] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:02:13,259 [4380] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:04:22,200 [3644] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/log/Index','/Sys/log')
+2016-12-23 22:04:23,052 [4948] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:04:23,053 [4948] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     order by A.ID desc
+2016-12-23 22:04:23,070 [4380] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:04:23,074 [4380] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     order by A.ID desc
+2016-12-23 22:04:23,086 [4948] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     ) tb_temp
+2016-12-23 22:04:23,086 [4380] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     ) tb_temp
+2016-12-23 22:04:26,929 [3644] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:04:29,795 [4380] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2016-12-23 22:04:29,814 [4380] DEBUG Servicesys_user - 获取动态列表
+2016-12-23 22:04:29,814 [4380] DEBUG Sys - select UserCode,UserName from sys_user
+2016-12-23 22:04:29,819 [4380] DEBUG Servicesys_organize - 获取动态列表
+2016-12-23 22:04:29,819 [4380] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2016-12-23 22:04:30,215 [4948] DEBUG Servicesys_role - 获取实体列表
+2016-12-23 22:04:30,216 [4948] DEBUG Sys - select sys_role.* from sys_role order by RoleSeq
+2016-12-23 22:04:43,114 [4380] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-23 22:04:43,529 [3764] DEBUG Servicesys_menu - 获取动态列表
+2016-12-23 22:04:43,529 [3764] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-23 22:04:44,330 [3644] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2016-12-23 22:04:44,337 [3644] DEBUG Servicesys_organize - 获取实体列表
+2016-12-23 22:04:44,337 [3644] DEBUG Sys - select sys_organize.* from sys_organize
+2016-12-23 22:05:34,893 [4380] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:05:34,893 [4380] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:05:34,893 [4380] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:18:02,489 [6516] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:18:02,501 [6516] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:18:02,654 [6516] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:18:02,686 [6516] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:18:02,690 [6516] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:18:02,694 [6516] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:18:02,848 [7348] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:18:04,417 [6900] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:18:04,601 [7540] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:18:04,612 [7540] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:18:04,619 [7540] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:18:05,773 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:18:05,773 [7348] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:18:05,779 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:18:39,195 [6900] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:18:39,196 [6900] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:18:39,196 [6900] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:18:41,116 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:18:41,117 [7540] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1' order by ID
+2016-12-23 22:18:41,119 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1' ) tb_temp
+2016-12-23 22:18:41,130 [7044] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:18:41,130 [7044] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1' order by ID
+2016-12-23 22:18:41,131 [7044] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1' ) tb_temp
+2016-12-23 22:18:43,070 [6900] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:18:43,070 [6900] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1' order by ID
+2016-12-23 22:18:43,070 [6900] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1' ) tb_temp
+2016-12-23 22:18:57,419 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:18:57,420 [7348] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:18:57,422 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:09,692 [6900] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:09,692 [6900] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:09,694 [6900] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:18,845 [7044] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:18,845 [7044] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:18,845 [7044] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:22,718 [7044] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:22,718 [7044] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:22,719 [7044] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:23,456 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:23,456 [7348] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:23,457 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:23,999 [7260] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:23,999 [7260] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:24,000 [7260] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:52,667 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:52,667 [7540] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:52,668 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:54,055 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:54,055 [7540] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:54,055 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:54,664 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:54,665 [7348] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:54,665 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:54,878 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:54,878 [7540] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:54,879 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:55,044 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:55,044 [7348] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:55,044 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:19:55,245 [7260] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:19:55,245 [7260] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:19:55,246 [7260] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:00,606 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:00,606 [7540] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:00,607 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:01,607 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:01,607 [7540] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:01,607 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:02,452 [7260] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:02,453 [7260] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:02,453 [7260] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:03,232 [2224] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:03,232 [2224] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:03,233 [2224] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:03,746 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:03,746 [7540] DEBUG Pyn - select top 20 * from CamaraType where  CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:03,747 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:07,988 [2224] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:20:07,990 [2224] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:20:07,990 [2224] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:20:09,899 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:09,899 [7540] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:09,900 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:11,546 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:11,547 [7348] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:11,547 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:12,282 [7044] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:12,282 [7044] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:12,282 [7044] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:12,889 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:12,889 [7540] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:12,889 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:13,400 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:13,400 [7348] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:13,401 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:13,640 [2224] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:13,640 [2224] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:13,640 [2224] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:13,894 [7260] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:13,895 [7260] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:13,895 [7260] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:14,497 [7044] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:14,497 [7044] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:14,497 [7044] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:15,131 [2224] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:15,131 [2224] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:15,133 [2224] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:29,620 [2224] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:29,620 [2224] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:20:29,622 [2224] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:20:31,522 [7260] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:20:31,523 [7260] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:20:31,523 [7260] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:20:32,329 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:20:32,329 [7348] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:20:32,330 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:21:10,724 [7044] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2016-12-23 22:21:11,190 [7540] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 22:21:11,191 [7540] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2016-12-23 22:21:11,199 [7540] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2016-12-23 22:21:12,783 [7348] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/log/Index','/Sys/log')
+2016-12-23 22:21:13,458 [7540] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:21:13,458 [7044] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:21:13,458 [7540] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     order by A.ID desc
+2016-12-23 22:21:13,468 [7540] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     ) tb_temp
+2016-12-23 22:21:13,479 [7044] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     order by A.ID desc
+2016-12-23 22:21:13,491 [7044] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     ) tb_temp
+2016-12-23 22:21:22,853 [7044] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:21:22,854 [7044] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     where  datediff(day,'2016-12-23',LoginDate) >=0 and datediff(day,'2016-12-23',LoginDate)<=0 order by A.ID desc
+2016-12-23 22:21:22,860 [7540] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:21:22,861 [7540] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     where  datediff(day,'2016-12-23',Date) >=0 and datediff(day,'2016-12-23',Date)<=0 order by A.ID desc
+2016-12-23 22:21:22,895 [7540] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     where  datediff(day,'2016-12-23',Date) >=0 and datediff(day,'2016-12-23',Date)<=0 ) tb_temp
+2016-12-23 22:21:22,907 [7044] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     where  datediff(day,'2016-12-23',LoginDate) >=0 and datediff(day,'2016-12-23',LoginDate)<=0 ) tb_temp
+2016-12-23 22:21:38,563 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:21:38,563 [7540] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:21:38,564 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:21:39,414 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:21:39,414 [7348] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:21:39,415 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:21:42,441 [7044] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:21:42,441 [7044] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:21:42,441 [7044] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:21:43,464 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:21:43,464 [7348] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:21:43,465 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:21:44,182 [3916] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:21:44,182 [3916] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:21:44,182 [3916] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:21:44,984 [7540] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:21:44,984 [7540] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:21:44,985 [7540] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:23:38,871 [7780] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:23:38,883 [7780] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:23:39,026 [7780] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:23:39,058 [7780] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:23:39,062 [7780] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:23:39,067 [7780] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:23:39,223 [6756] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:23:40,595 [7260] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:23:40,796 [7348] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:23:40,806 [7348] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:23:40,812 [7348] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:23:41,984 [6756] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:23:41,984 [6756] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:23:41,991 [6756] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:23:46,081 [7348] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:23:46,082 [7348] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:23:46,082 [7348] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:23:51,346 [7948] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:23:51,347 [7948] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:23:51,347 [7948] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:23:51,348 [6756] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:23:51,355 [6756] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1' order by ID
+2016-12-23 22:23:51,373 [6756] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1' ) tb_temp
+2016-12-23 22:23:51,964 [7348] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:23:51,964 [7348] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:23:51,966 [7348] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:23:56,481 [6820] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:23:56,482 [6820] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:23:56,482 [6820] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:24:00,458 [7348] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:24:00,459 [7348] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:24:00,460 [7348] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:24:00,469 [5864] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:24:00,469 [5864] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '0' order by ID
+2016-12-23 22:24:00,470 [5864] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '0' ) tb_temp
+2016-12-23 22:24:01,018 [7260] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:24:01,019 [7260] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:24:01,021 [7260] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:24:07,335 [6820] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:24:07,336 [6820] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:24:07,337 [6820] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:24:14,583 [7948] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:24:14,584 [7948] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:24:14,584 [7948] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:24:14,590 [6820] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:24:14,590 [6820] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '!' order by ID
+2016-12-23 22:24:14,628 [6820] ERROR ServiceCamaraType - 获取动态列表失败
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the varchar value '!' to data type int.
+   在 Zephyr.Data.ExecuteQueryHandler.HandleQueryException(Exception exception) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 107
+   在 Zephyr.Data.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 28
+   在 Zephyr.Data.DbCommand.QueryMany[TEntity,TList](Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\QueryMany.cs:行号 14
+   在 Zephyr.Data.DbCommand.QueryMany[TEntity](Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\QueryMany.cs:行号 36
+   在 Zephyr.Data.SelectBuilder`1.QueryManyDynamic() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Builders\Select\SelectBuilder.cs:行号 150
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass63.<GetDynamicList>b__62() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 28
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+ClientConnectionId:543450fd-6bc4-4e09-9301-4258968ea90f
+Error Number:245,State:1,Class:16
+2016-12-23 22:24:14,655 [6820] ERROR /api/Pyn/CamaraType - System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the varchar value '!' to data type int.
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetDynamicList(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 28
+   在 Zephyr.Core.ServiceBase`1.GetDynamicListWithPaging(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 43
+   在 Zephyr.Areas.Pyn.Controllers.CamaraTypeApiController.Get(RequestWrapper query) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Pyn\Controllers\CamaraTypeController.cs:行号 79
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+ClientConnectionId:543450fd-6bc4-4e09-9301-4258968ea90f
+Error Number:245,State:1,Class:16
+2016-12-23 22:24:15,091 [7892] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:24:15,091 [7892] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:24:15,091 [7892] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:25:26,768 [7348] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:25:26,769 [7348] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:25:26,770 [7348] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:25:30,470 [7892] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:25:30,472 [7892] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:25:30,472 [7892] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:25:44,018 [6756] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:25:44,019 [6756] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:25:44,019 [6756] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:25:44,027 [5864] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:25:44,027 [5864] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:25:44,028 [5864] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:25:44,730 [7948] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:25:44,730 [7948] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:25:44,732 [7948] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:26:43,297 [7628] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:26:43,325 [7628] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:26:43,468 [7628] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:26:43,509 [7628] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:26:43,521 [7628] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:26:43,533 [7628] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:26:43,861 [5536] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:26:45,815 [5536] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:26:48,702 [6988] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:26:48,754 [6988] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:26:48,763 [6988] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:27:24,867 [6988] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:27:24,868 [6988] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:27:32,419 [6988] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:27:36,451 [5536] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:27:36,465 [5536] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:27:36,466 [5536] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:27:49,943 [6532] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:27:49,951 [6532] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:27:49,951 [6532] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:29:15,263 [6656] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:29:15,264 [6656] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '5'and CreateDate =  '2016-12-23' order by ID
+2016-12-23 22:29:15,288 [6656] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '5'and CreateDate =  '2016-12-23' ) tb_temp
+2016-12-23 22:29:21,348 [1052] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:29:21,348 [1052] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:29:21,356 [1052] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:29:26,947 [6156] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/log/Index','/Sys/log')
+2016-12-23 22:29:31,557 [6156] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:29:31,558 [6156] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     order by A.ID desc
+2016-12-23 22:29:31,646 [6532] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:29:31,647 [6532] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     order by A.ID desc
+2016-12-23 22:29:31,678 [6156] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     ) tb_temp
+2016-12-23 22:29:31,725 [6532] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     ) tb_temp
+2016-12-23 22:32:30,792 [1052] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:32:30,803 [1052] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     where  datediff(day,'2016-12-23',LoginDate) >=0 and datediff(day,'2016-12-23',LoginDate)<=0 order by A.ID desc
+2016-12-23 22:32:30,805 [1052] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     where  datediff(day,'2016-12-23',LoginDate) >=0 and datediff(day,'2016-12-23',LoginDate)<=0 ) tb_temp
+2016-12-23 22:32:30,822 [6532] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:32:30,822 [6532] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     where  datediff(day,'2016-12-23',Date) >=0 and datediff(day,'2016-12-23',Date)<=0 order by A.ID desc
+2016-12-23 22:32:30,823 [6532] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     where  datediff(day,'2016-12-23',Date) >=0 and datediff(day,'2016-12-23',Date)<=0 ) tb_temp
+2016-12-23 22:35:21,896 [7844] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:35:22,058 [1052] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:35:22,260 [6616] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/log/Index','/Sys/log')
+2016-12-23 22:35:22,657 [7844] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:35:22,657 [7844] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     order by A.ID desc
+2016-12-23 22:35:22,658 [7844] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     ) tb_temp
+2016-12-23 22:35:22,666 [6988] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:35:22,666 [6988] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     order by A.ID desc
+2016-12-23 22:35:22,667 [6988] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     ) tb_temp
+2016-12-23 22:35:24,798 [6656] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:35:24,801 [6656] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:35:24,801 [6656] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:35:25,243 [6616] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:35:25,254 [6616] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:35:25,254 [6616] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:36:27,338 [7612] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:36:27,350 [7612] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:36:27,494 [7612] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:36:27,527 [7612] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:36:27,530 [7612] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:36:27,536 [7612] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:36:27,696 [7700] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:36:29,254 [6988] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:36:29,485 [7424] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:36:29,494 [7424] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:36:29,504 [7424] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:36:30,663 [6660] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:36:30,663 [6660] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:36:30,671 [6660] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:36:40,760 [6796] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:36:40,762 [6796] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:36:40,762 [6796] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:36:40,779 [7700] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:36:40,779 [7700] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:36:40,780 [7700] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:36:41,363 [1052] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:36:41,363 [1052] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:36:41,365 [1052] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:36:44,245 [6656] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:36:44,246 [6656] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:36:44,246 [6656] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:36:47,486 [8116] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:36:47,487 [8116] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:36:47,487 [8116] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:36:47,497 [8116] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:36:47,497 [8116] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '0' order by ID
+2016-12-23 22:36:47,502 [8116] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '0' ) tb_temp
+2016-12-23 22:36:48,139 [7844] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:36:48,139 [7844] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:36:48,141 [7844] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:39:05,766 [6440] DEBUG ServiceCamaraType - 编辑记录
+2016-12-23 22:39:05,776 [6440] DEBUG ServiceCamaraType - 获取动态对象
+2016-12-23 22:39:05,778 [6440] DEBUG Pyn - select 
+        CamaraType
+    .* from 
+        CamaraType
+     where  ID =  '2'
+2016-12-23 22:39:05,785 [6440] DEBUG Pyn - insert into 
+        CamaraType
+    ([ID],[Serie],[Type],[Description],[IsEnable],[UpdatePerson],[UpdateDate],[CreatePerson],[CreateDate]) values('2','ACE','ACA1600-20gc','','','许薛军','2016/12/23 22:39:05','许薛军','2016/12/23 22:39:05')
+2016-12-23 22:39:05,836 [6440] ERROR ServiceCamaraType - 编辑记录失败
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'CamaraType' when IDENTITY_INSERT is set to OFF.
+   在 Zephyr.Data.ExecuteQueryHandler.HandleQueryException(Exception exception) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 107
+   在 Zephyr.Data.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 28
+   在 Zephyr.Data.DbCommand.Execute() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\Execute.cs:行号 9
+   在 Zephyr.Data.BaseInsertBuilder.Execute() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Builders\Insert\BaseInsertBuilder.cs:行号 22
+   在 Zephyr.Core.ServiceBase`1.<Edit>b__51(RequestWrapper x) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseEdit.cs:行号 62
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass55.<Edit>b__52() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseEdit.cs:行号 119
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+ClientConnectionId:cccd6672-c14e-40dc-90d2-2d6a3d12bc7c
+Error Number:544,State:1,Class:16
+2016-12-23 22:39:05,880 [6440] ERROR /api/Pyn/CamaraType/edit - System.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'CamaraType' when IDENTITY_INSERT is set to OFF.
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.Edit(RequestWrapper formWrapper, RequestWrapper listWrapper, JObject data) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseEdit.cs:行号 68
+   在 CallSite.Target(Closure , CallSite , CamaraTypeService , Object , RequestWrapper , Object )
+   在 System.Dynamic.UpdateDelegates.UpdateAndExecute4[T0,T1,T2,T3,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3)
+   在 Zephyr.Areas.Pyn.Controllers.CamaraTypeApiController.Edit(Object data) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Pyn\Controllers\CamaraTypeController.cs:行号 101
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClassf.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+ClientConnectionId:cccd6672-c14e-40dc-90d2-2d6a3d12bc7c
+Error Number:544,State:1,Class:16
+2016-12-23 22:40:21,117 [6420] DEBUG ServiceCamaraType - 编辑记录
+2016-12-23 22:40:21,118 [6420] DEBUG ServiceCamaraType - 获取动态对象
+2016-12-23 22:40:21,119 [6420] DEBUG Pyn - select 
+        CamaraType
+    .* from 
+        CamaraType
+     where  ID =  ''
+2016-12-23 22:40:21,120 [6420] DEBUG Pyn - insert into 
+        CamaraType
+    ([UpdatePerson],[UpdateDate],[CreatePerson],[CreateDate]) values('许薛军','2016/12/23 22:40:21','许薛军','2016/12/23 22:40:21')
+2016-12-23 22:40:21,129 [6420] DEBUG ServiceCamaraType - 获取动态对象
+2016-12-23 22:40:21,129 [6420] DEBUG Pyn - select 
+        CamaraType
+    .* from 
+        CamaraType
+     where  ID =  '1'
+2016-12-23 22:40:21,136 [6420] DEBUG Pyn - update 
+        CamaraType
+     set [Serie] = 'ACE', [Type] = 'ACA1600-20gc', [Description] = '性价比高，最低200万像素', [IsEnable] = 'true', [CreateDate] = '2016/12/23 0:43:38', [CreatePerson] = '许薛军', [UpdatePerson] = '许薛军', [UpdateDate] = '2016/12/23 22:40:21' where  ID =  '1'
+2016-12-23 22:41:02,538 [6616] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/log/Index','/Sys/log')
+2016-12-23 22:41:03,256 [8468] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:41:03,257 [8468] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     order by A.ID desc
+2016-12-23 22:41:03,264 [7944] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:41:03,264 [7944] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     order by A.ID desc
+2016-12-23 22:41:03,270 [8468] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     ) tb_temp
+2016-12-23 22:41:03,271 [7944] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     ) tb_temp
+2016-12-23 22:41:11,210 [8748] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:41:11,210 [8748] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     where  datediff(day,'2016-12-23',Date) >=0 and datediff(day,'2016-12-23',Date)<=0 order by A.ID desc
+2016-12-23 22:41:11,211 [6616] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:41:11,219 [8748] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     where  datediff(day,'2016-12-23',Date) >=0 and datediff(day,'2016-12-23',Date)<=0 ) tb_temp
+2016-12-23 22:41:11,228 [6616] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     where  datediff(day,'2016-12-23',LoginDate) >=0 and datediff(day,'2016-12-23',LoginDate)<=0 order by A.ID desc
+2016-12-23 22:41:11,231 [6616] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     where  datediff(day,'2016-12-23',LoginDate) >=0 and datediff(day,'2016-12-23',LoginDate)<=0 ) tb_temp
+2016-12-23 22:41:25,619 [6440] DEBUG Servicesys_loginHistory - 获取实体列表
+2016-12-23 22:41:25,619 [6440] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     where  datediff(day,'2016-12-23',LoginDate) >=0 and datediff(day,'2016-12-23',LoginDate)<=0 order by A.ID desc
+2016-12-23 22:41:25,622 [8748] DEBUG Servicesys_log - 获取实体列表
+2016-12-23 22:41:25,622 [8748] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     where  datediff(day,'2016-12-23',Date) >=0 and datediff(day,'2016-12-23',Date)<=0 order by A.ID desc
+2016-12-23 22:41:25,622 [6440] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     where  datediff(day,'2016-12-23',LoginDate) >=0 and datediff(day,'2016-12-23',LoginDate)<=0 ) tb_temp
+2016-12-23 22:41:25,628 [8748] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     where  datediff(day,'2016-12-23',Date) >=0 and datediff(day,'2016-12-23',Date)<=0 ) tb_temp
+2016-12-23 22:41:29,177 [8468] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:41:29,178 [6440] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:41:29,180 [8468] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:41:29,180 [8468] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:41:29,201 [6440] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:41:29,201 [6440] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:41:29,854 [8248] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:41:29,854 [8248] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:41:29,855 [8248] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:42:14,389 [8248] DEBUG ServiceCamaraType - 编辑记录
+2016-12-23 22:42:29,202 [8468] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:42:29,365 [7944] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:42:29,653 [6420] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:42:29,653 [6420] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 22:42:29,654 [6420] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2016-12-23 22:42:30,198 [8248] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:42:30,198 [8248] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:42:30,199 [8248] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:48:19,655 [8212] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:48:19,680 [8212] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:48:19,901 [8212] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:48:19,926 [8212] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:48:19,935 [8212] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:48:19,946 [8212] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:48:20,286 [3460] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:48:22,616 [788] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:48:34,180 [4624] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:48:56,911 [8120] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:48:56,917 [8120] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:48:56,962 [8120] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:49:01,494 [5272] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:49:08,819 [5272] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:49:13,086 [8120] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:49:56,451 [5272] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:49:56,453 [5272] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '2' order by ID
+2016-12-23 22:49:56,480 [5272] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '2' ) tb_temp
+2016-12-23 22:50:05,125 [4624] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:50:05,125 [4624] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:50:05,134 [4624] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:50:18,213 [5272] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:50:50,877 [8120] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:50:50,877 [8120] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:50:50,911 [8120] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:50:54,894 [9168] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:51:00,229 [5272] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:53:27,735 [8276] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:53:27,735 [8276] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '2' order by ID
+2016-12-23 22:53:27,762 [8276] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '2' ) tb_temp
+2016-12-23 22:54:29,299 [8120] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:54:32,308 [9168] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:54:32,308 [9168] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:54:32,342 [9168] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:54:32,581 [8276] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:54:32,852 [8120] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:54:35,462 [8276] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:54:35,463 [8276] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:54:35,490 [8276] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:55:32,485 [6528] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:55:32,516 [6528] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:55:32,673 [6528] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:55:32,716 [6528] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:55:32,723 [6528] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:55:32,733 [6528] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 22:55:33,045 [8280] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 22:55:35,483 [8280] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 22:55:38,234 [8652] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:56:00,710 [8280] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:56:00,722 [8280] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:56:00,766 [8280] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 22:56:17,355 [8312] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:56:30,126 [4624] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:56:31,704 [4624] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:56:36,634 [8312] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 22:57:39,678 [4624] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:57:39,679 [4624] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1'and CreatePerson =  'WWE' order by ID
+2016-12-23 22:57:39,704 [4624] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1'and CreatePerson =  'WWE' ) tb_temp
+2016-12-23 22:57:47,584 [8652] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 22:57:47,617 [8652] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 22:57:47,626 [8652] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 23:02:21,741 [8804] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:02:21,766 [8804] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:02:21,959 [8804] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:02:21,984 [8804] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:02:21,990 [8804] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:02:21,997 [8804] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:02:22,297 [9168] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 23:02:24,758 [8020] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 23:02:27,934 [8020] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 23:02:49,920 [9168] DEBUG Servicesys_parameter - 获取实体列表
+2016-12-23 23:02:49,926 [9168] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ID
+2016-12-23 23:02:50,105 [9168] ERROR Servicesys_parameter - 获取实体列表失败
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ID'.
+   在 Zephyr.Data.ExecuteQueryHandler.HandleQueryException(Exception exception) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 107
+   在 Zephyr.Data.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 28
+   在 Zephyr.Data.DbCommand.QueryMany[TEntity,TList](Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\QueryMany.cs:行号 14
+   在 Zephyr.Data.DbCommand.QueryMany[TEntity](Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\QueryMany.cs:行号 36
+   在 Zephyr.Data.SelectBuilder`1.QueryMany(Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Builders\Select\SelectBuilder.cs:行号 99
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass60.<GetModelList>b__5f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 21
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+ClientConnectionId:8a0e9d5a-9f44-4d4d-ba04-e874c75e38bb
+Error Number:207,State:1,Class:16
+2016-12-23 23:03:30,828 [9168] ERROR /api/Pyn/CamaraType - System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ID'.
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModelList(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 21
+   在 Zephyr.Core.ServiceBase`1.GetModelListWithPaging(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 35
+   在 Zephyr.Areas.Pyn.Controllers.CamaraTypeApiController.Get(RequestWrapper query) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Pyn\Controllers\CamaraTypeController.cs:行号 85
+   在 lambda_method(Closure , Object , Object[] )
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass13.<GetExecutor>b__c(Object instance, Object[] methodParameters)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   在 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.<>c__DisplayClass5.<ExecuteAsync>b__4()
+   在 System.Threading.Tasks.TaskHelpers.RunSynchronously[TResult](Func`1 func, CancellationToken cancellationToken)
+ClientConnectionId:8a0e9d5a-9f44-4d4d-ba04-e874c75e38bb
+Error Number:207,State:1,Class:16
+2016-12-23 23:04:55,420 [8564] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:04:55,445 [8564] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:04:55,604 [8564] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:04:55,629 [8564] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:04:55,667 [8564] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:04:55,674 [8564] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:04:56,061 [7268] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 23:04:58,371 [7268] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 23:05:05,466 [7076] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 23:05:19,184 [7952] DEBUG ServiceCamaraType - 获取实体列表
+2016-12-23 23:05:19,190 [7952] DEBUG Pyn - select top 20 CamaraType.* from CamaraType order by ID
+2016-12-23 23:05:19,238 [7952] DEBUG Pyn - select count(*) from ( select CamaraType.* from CamaraType ) tb_temp
+2016-12-23 23:05:26,128 [7952] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 23:06:21,825 [7952] DEBUG ServiceCamaraType - 获取实体列表
+2016-12-23 23:06:21,826 [7952] DEBUG Pyn - select top 20 CamaraType.* from CamaraType order by ID
+2016-12-23 23:06:21,846 [7952] DEBUG Pyn - select count(*) from ( select CamaraType.* from CamaraType ) tb_temp
+2016-12-23 23:08:59,982 [4248] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:09:00,018 [4248] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:09:00,276 [4248] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:09:00,318 [4248] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:09:00,331 [4248] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:09:00,344 [4248] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:09:00,643 [7036] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 23:09:02,892 [7904] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 23:09:05,430 [7036] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 23:09:25,641 [8116] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 23:09:25,651 [8116] DEBUG Pyn - select top 20 * from CamaraType order by ID
+2016-12-23 23:09:25,697 [8116] DEBUG Pyn - select count(*) from ( select * from CamaraType ) tb_temp
+2016-12-23 23:09:28,733 [1896] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 23:10:43,779 [7904] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 23:10:43,780 [7904] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '2' order by ID
+2016-12-23 23:10:43,805 [7904] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '2' ) tb_temp
+2016-12-23 23:11:06,571 [1940] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 23:11:12,578 [1940] DEBUG ServiceCamaraType - 获取动态列表
+2016-12-23 23:11:12,579 [1940] DEBUG Pyn - select top 20 * from CamaraType where  ID =  '1' order by ID
+2016-12-23 23:11:12,600 [1940] DEBUG Pyn - select count(*) from ( select * from CamaraType where  ID =  '1' ) tb_temp
+2016-12-23 23:13:58,202 [7524] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:13:58,214 [7524] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:13:58,365 [7524] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:13:58,397 [7524] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:13:58,401 [7524] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:13:58,406 [7524] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:13:58,561 [6352] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 23:13:59,927 [8608] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 23:14:00,153 [8248] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 23:14:11,688 [8848] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')
+2016-12-23 23:22:54,178 [6380] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2016-12-23 23:22:54,733 [7700] DEBUG Servicesys_menu - 获取动态列表
+2016-12-23 23:22:54,739 [7700] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2016-12-23 23:23:01,379 [3780] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2016-12-23 23:23:01,385 [3780] DEBUG Servicesys_user - 获取动态列表
+2016-12-23 23:23:01,386 [3780] DEBUG Sys - select UserCode,UserName from sys_user
+2016-12-23 23:23:01,386 [3780] DEBUG Servicesys_organize - 获取动态列表
+2016-12-23 23:23:01,387 [3780] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2016-12-23 23:23:01,804 [6380] DEBUG Servicesys_role - 获取实体列表
+2016-12-23 23:23:01,805 [6380] DEBUG Sys - select sys_role.* from sys_role order by RoleSeq
+2016-12-23 23:23:03,476 [7700] DEBUG Sys - select * from sys_button order by ButtonSeq
+2016-12-23 23:23:03,478 [7700] DEBUG Sys - select A.MenuName,A.MenuCode,A.ParentCode,A.IconClass as iconCls,B.MenuName as ParentName,(select 1 from sys_roleMenuMap tb_role where tb_role.RoleCode='super' and tb_role.MenuCode=A.MenuCode) as checked,(
+select case when max(tb1_accredit.ID) is null then -1 
+            when max(tb2_accredit.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_accredit
+left join sys_roleMenuButtonMap AS tb2_accredit ON tb2_accredit.MenuCode=tb1_accredit.MenuCode AND tb2_accredit.ButtonCode=tb1_accredit.ButtonCode AND tb2_accredit.RoleCode='super'
+where tb1_accredit.MenuCode = A.MenuCode and  tb1_accredit.ButtonCode = 'accredit'  
+)as 'btn_accredit' ,(
+select case when max(tb1_add.ID) is null then -1 
+            when max(tb2_add.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_add
+left join sys_roleMenuButtonMap AS tb2_add ON tb2_add.MenuCode=tb1_add.MenuCode AND tb2_add.ButtonCode=tb1_add.ButtonCode AND tb2_add.RoleCode='super'
+where tb1_add.MenuCode = A.MenuCode and  tb1_add.ButtonCode = 'add'  
+)as 'btn_add' ,(
+select case when max(tb1_audit.ID) is null then -1 
+            when max(tb2_audit.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_audit
+left join sys_roleMenuButtonMap AS tb2_audit ON tb2_audit.MenuCode=tb1_audit.MenuCode AND tb2_audit.ButtonCode=tb1_audit.ButtonCode AND tb2_audit.RoleCode='super'
+where tb1_audit.MenuCode = A.MenuCode and  tb1_audit.ButtonCode = 'audit'  
+)as 'btn_audit' ,(
+select case when max(tb1_browse.ID) is null then -1 
+            when max(tb2_browse.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_browse
+left join sys_roleMenuButtonMap AS tb2_browse ON tb2_browse.MenuCode=tb1_browse.MenuCode AND tb2_browse.ButtonCode=tb1_browse.ButtonCode AND tb2_browse.RoleCode='super'
+where tb1_browse.MenuCode = A.MenuCode and  tb1_browse.ButtonCode = 'browse'  
+)as 'btn_browse' ,(
+select case when max(tb1_copy.ID) is null then -1 
+            when max(tb2_copy.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_copy
+left join sys_roleMenuButtonMap AS tb2_copy ON tb2_copy.MenuCode=tb1_copy.MenuCode AND tb2_copy.ButtonCode=tb1_copy.ButtonCode AND tb2_copy.RoleCode='super'
+where tb1_copy.MenuCode = A.MenuCode and  tb1_copy.ButtonCode = 'copy'  
+)as 'btn_copy' ,(
+select case when max(tb1_delete.ID) is null then -1 
+            when max(tb2_delete.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_delete
+left join sys_roleMenuButtonMap AS tb2_delete ON tb2_delete.MenuCode=tb1_delete.MenuCode AND tb2_delete.ButtonCode=tb1_delete.ButtonCode AND tb2_delete.RoleCode='super'
+where tb1_delete.MenuCode = A.MenuCode and  tb1_delete.ButtonCode = 'delete'  
+)as 'btn_delete' ,(
+select case when max(tb1_download.ID) is null then -1 
+            when max(tb2_download.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_download
+left join sys_roleMenuButtonMap AS tb2_download ON tb2_download.MenuCode=tb1_download.MenuCode AND tb2_download.ButtonCode=tb1_download.ButtonCode AND tb2_download.RoleCode='super'
+where tb1_download.MenuCode = A.MenuCode and  tb1_download.ButtonCode = 'download'  
+)as 'btn_download' ,(
+select case when max(tb1_edit.ID) is null then -1 
+            when max(tb2_edit.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_edit
+left join sys_roleMenuButtonMap AS tb2_edit ON tb2_edit.MenuCode=tb1_edit.MenuCode AND tb2_edit.ButtonCode=tb1_edit.ButtonCode AND tb2_edit.RoleCode='super'
+where tb1_edit.MenuCode = A.MenuCode and  tb1_edit.ButtonCode = 'edit'  
+)as 'btn_edit' ,(
+select case when max(tb1_export.ID) is null then -1 
+            when max(tb2_export.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_export
+left join sys_roleMenuButtonMap AS tb2_export ON tb2_export.MenuCode=tb1_export.MenuCode AND tb2_export.ButtonCode=tb1_export.ButtonCode AND tb2_export.RoleCode='super'
+where tb1_export.MenuCode = A.MenuCode and  tb1_export.ButtonCode = 'export'  
+)as 'btn_export' ,(
+select case when max(tb1_import.ID) is null then -1 
+            when max(tb2_import.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_import
+left join sys_roleMenuButtonMap AS tb2_import ON tb2_import.MenuCode=tb1_import.MenuCode AND tb2_import.ButtonCode=tb1_import.ButtonCode AND tb2_import.RoleCode='super'
+where tb1_import.MenuCode = A.MenuCode and  tb1_import.ButtonCode = 'import'  
+)as 'btn_import' ,(
+select case when max(tb1_print.ID) is null then -1 
+            when max(tb2_print.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_print
+left join sys_roleMenuButtonMap AS tb2_print ON tb2_print.MenuCode=tb1_print.MenuCode AND tb2_print.ButtonCode=tb1_print.ButtonCode AND tb2_print.RoleCode='super'
+where tb1_print.MenuCode = A.MenuCode and  tb1_print.ButtonCode = 'print'  
+)as 'btn_print' ,(
+select case when max(tb1_refresh.ID) is null then -1 
+            when max(tb2_refresh.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_refresh
+left join sys_roleMenuButtonMap AS tb2_refresh ON tb2_refresh.MenuCode=tb1_refresh.MenuCode AND tb2_refresh.ButtonCode=tb1_refresh.ButtonCode AND tb2_refresh.RoleCode='super'
+where tb1_refresh.MenuCode = A.MenuCode and  tb1_refresh.ButtonCode = 'refresh'  
+)as 'btn_refresh' ,(
+select case when max(tb1_save.ID) is null then -1 
+            when max(tb2_save.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_save
+left join sys_roleMenuButtonMap AS tb2_save ON tb2_save.MenuCode=tb1_save.MenuCode AND tb2_save.ButtonCode=tb1_save.ButtonCode AND tb2_save.RoleCode='super'
+where tb1_save.MenuCode = A.MenuCode and  tb1_save.ButtonCode = 'save'  
+)as 'btn_save' ,(
+select case when max(tb1_search.ID) is null then -1 
+            when max(tb2_search.ID) is null then 0 
+            else 1 end 
+from  sys_menuButtonMap AS tb1_search
+left join sys_roleMenuButtonMap AS tb2_search ON tb2_search.MenuCode=tb1_search.MenuCode AND tb2_search.ButtonCode=tb1_search.ButtonCode AND tb2_search.RoleCode='super'
+where tb1_search.MenuCode = A.MenuCode and  tb1_search.ButtonCode = 'search'  
+)as 'btn_search' 
+from sys_menu as A
+left join sys_menu B on B.MenuCode = A.ParentCode
+where A.IsEnable = 1
+order by A.MenuSeq,A.MenuCode
+2016-12-23 23:23:03,484 [7768] DEBUG Servicesys_permission - 获取动态列表
+2016-12-23 23:23:03,495 [7768] DEBUG Sys - select A.*
+,case when B.PermissionCode is null then 0 else 1           end as checked
+,case when B.PermissionCode is null then 0 else B.IsDefault end as IsDefault from sys_permission A
+left join sys_rolePermissionMap B on B.RoleCode='super' and B.PermissionCode = A.PermissionCode 
+2016-12-23 23:23:03,555 [7700] DEBUG Sys - select * from sys_roleMenuColumnMap where RoleCode = 'super'
+2016-12-23 23:23:48,080 [8776] DEBUG Servicesys_role - 修改角色菜单权限
+2016-12-23 23:23:48,083 [8776] DEBUG Sys - delete from sys_roleMenuMap where [RoleCode] = 'super'
+2016-12-23 23:23:48,088 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','13')
+2016-12-23 23:23:48,089 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','1301')
+2016-12-23 23:23:48,090 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','10')
+2016-12-23 23:23:48,091 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','1008')
+2016-12-23 23:23:48,091 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','100801')
+2016-12-23 23:23:48,092 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','99')
+2016-12-23 23:23:48,092 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9902')
+2016-12-23 23:23:48,092 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9903')
+2016-12-23 23:23:48,092 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9910')
+2016-12-23 23:23:48,092 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9904')
+2016-12-23 23:23:48,092 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9905')
+2016-12-23 23:23:48,092 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9906')
+2016-12-23 23:23:48,092 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9911')
+2016-12-23 23:23:48,093 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9907')
+2016-12-23 23:23:48,093 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9909')
+2016-12-23 23:23:48,093 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9908')
+2016-12-23 23:23:48,093 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','98')
+2016-12-23 23:23:48,093 [8776] DEBUG Sys - insert into sys_roleMenuMap([RoleCode],[MenuCode]) values('super','9810')
+2016-12-23 23:23:48,095 [8776] DEBUG Servicesys_role - 修改角色菜单按钮权限
+2016-12-23 23:23:48,095 [8776] DEBUG Sys - delete from sys_roleMenuButtonMap where [RoleCode] = 'super'
+2016-12-23 23:23:48,097 [8776] DEBUG Servicesys_role - 修改角色数据权限
+2016-12-23 23:23:48,097 [8776] DEBUG Sys - delete from sys_rolePermissionMap where [RoleCode] = 'super'
+2016-12-23 23:23:48,099 [8776] DEBUG Servicesys_role - 修改角色数据列权限
+2016-12-23 23:23:48,100 [8776] DEBUG Sys - delete from sys_roleMenuColumnMap where [RoleCode] = 'super'
+2016-12-23 23:23:51,771 [3780] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 23:23:51,931 [6380] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 23:23:52,180 [8776] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2016-12-23 23:23:52,181 [8776] DEBUG Servicesys_user - 获取动态列表
+2016-12-23 23:23:52,181 [8776] DEBUG Sys - select UserCode,UserName from sys_user
+2016-12-23 23:23:52,181 [8776] DEBUG Servicesys_organize - 获取动态列表
+2016-12-23 23:23:52,181 [8776] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2016-12-23 23:23:52,456 [3780] DEBUG Servicesys_role - 获取实体列表
+2016-12-23 23:23:52,461 [3780] DEBUG Sys - select sys_role.* from sys_role order by RoleSeq
+2016-12-23 23:38:51,579 [8768] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:38:51,605 [8768] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:38:51,744 [8768] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:38:51,820 [8768] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:38:51,833 [8768] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:38:51,840 [8768] DEBUG Pyn - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-23 23:38:52,187 [8804] DEBUG Sys - select * from sys_userSetting where UserCode='super'
+2016-12-23 23:38:54,492 [4520] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'super' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'super'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2016-12-23 23:39:00,032 [8804] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Mms/deal/Index','/Mms/deal')
+2016-12-23 23:39:03,938 [8804] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 23:39:03,947 [8804] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'DisposalType'
+2016-12-23 23:39:03,970 [8804] DEBUG Servicesys_code - 获取动态列表
+2016-12-23 23:39:03,970 [8804] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'DisposalWay'
+2016-12-23 23:39:04,804 [7704] DEBUG Servicemms_deal - 获取动态列表
+2016-12-23 23:39:04,804 [7704] DEBUG Mms - select top 20 
+        A.*, B.ProjectName
+     from 
+        mms_deal A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2016-12-23 23:39:04,912 [7704] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName
+     from 
+        mms_deal A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2016-12-23 23:57:55,750 [6820] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'super'
+and C.URL in ('/Pyn/CamaraType/Index','/Pyn/CamaraType')

@@ -1,0 +1,624 @@
+2016-12-21 20:33:14,296 [9168] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 20:33:28,833 [9168] ERROR Servicesys_user - 获取实体对象失败
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 25 - 连接字符串无效) ---> System.ComponentModel.Win32Exception (0x80004005): 参数错误。
+   在 Zephyr.Data.ExecuteQueryHandler.HandleQueryException(Exception exception) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 107
+   在 Zephyr.Data.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 28
+   在 Zephyr.Data.DbCommand.QuerySingle[TEntity](Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\QuerySingle.cs:行号 12
+   在 Zephyr.Data.SelectBuilder`1.QuerySingle(Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Builders\Select\SelectBuilder.cs:行号 129
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:87,State:0,Class:20
+2016-12-21 20:33:28,932 [9168] ERROR /login/doAction - System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 25 - 连接字符串无效) ---> System.ComponentModel.Win32Exception (0x80004005): 参数错误。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:87,State:0,Class:20
+2016-12-21 20:33:58,576 [9024] ERROR /login/doAction - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 16
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 20:39:27,569 [8500] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 20:41:22,958 [1560] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 20:41:37,423 [1560] ERROR Servicesys_user - 获取实体对象失败
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 25 - 连接字符串无效) ---> System.ComponentModel.Win32Exception (0x80004005): 参数错误。
+   在 Zephyr.Data.ExecuteQueryHandler.HandleQueryException(Exception exception) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 107
+   在 Zephyr.Data.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 28
+   在 Zephyr.Data.DbCommand.QuerySingle[TEntity](Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\QuerySingle.cs:行号 12
+   在 Zephyr.Data.SelectBuilder`1.QuerySingle(Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Builders\Select\SelectBuilder.cs:行号 129
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:87,State:0,Class:20
+2016-12-21 20:42:54,893 [1560] ERROR /login/doAction - System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: SQL Network Interfaces, error: 25 - 连接字符串无效) ---> System.ComponentModel.Win32Exception (0x80004005): 参数错误。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:87,State:0,Class:20
+2016-12-21 20:44:34,074 [8492] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-21 20:44:34,090 [8492] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-21 20:45:00,392 [9076] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 20:45:00,397 [9076] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'super'and Password =  '1234'and IsEnable =  'True'
+2016-12-21 20:45:00,472 [9076] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'super' 
+2016-12-21 20:45:00,532 [9076] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('super','超级管理员','170KOLDN5WNNJFX','localhost','山西省晋中市','2016/12/21 20:45:00')
+2016-12-21 20:45:00,543 [9076] DEBUG Servicemms_project - 获取实体对象
+2016-12-21 20:45:10,550 [9076] ERROR Servicemms_project - 获取实体对象失败
+System.Exception: 数据库不可用,请检查系统设置后重试！
+   在 Zephyr.Core.Db.<Context>b__2(ErrorEventArgs e) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 98
+   在 Zephyr.Data.ExecuteQueryHandler.HandleQueryException(Exception exception) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 105
+   在 Zephyr.Data.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 28
+   在 Zephyr.Data.DbCommand.QuerySingle[TEntity](Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\QuerySingle.cs:行号 12
+   在 Zephyr.Data.SelectBuilder`1.QuerySingle(Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Builders\Select\SelectBuilder.cs:行号 129
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 20:45:10,574 [9076] ERROR /login/doAction - System.Exception: 数据库不可用,请检查系统设置后重试！
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Web.Areas.Mms.Common.MmsService.LoginHandler(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Mms\Common\MmsService.cs:行号 69
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 41
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 20:45:17,746 [9076] ERROR /login/doAction - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 16
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 20:47:43,818 [8492] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-21 20:47:43,828 [8492] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-12-21 20:48:33,514 [9276] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 20:48:33,520 [9276] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'super'and Password =  '1234'and IsEnable =  'True'
+2016-12-21 20:48:33,556 [9276] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'super' 
+2016-12-21 20:48:33,575 [9276] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('super','超级管理员','170KOLDN5WNNJFX','localhost','山西省晋中市','2016/12/21 20:48:33')
+2016-12-21 20:48:33,576 [9276] DEBUG Servicemms_project - 获取实体对象
+2016-12-21 20:48:43,582 [9276] ERROR Servicemms_project - 获取实体对象失败
+System.Exception: 数据库不可用,请检查系统设置后重试！
+   在 Zephyr.Core.Db.<Context>b__2(ErrorEventArgs e) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 98
+   在 Zephyr.Data.ExecuteQueryHandler.HandleQueryException(Exception exception) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 105
+   在 Zephyr.Data.ExecuteQueryHandler.ExecuteQuery(Boolean useReader, Action action) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\Handlers\ExecuteQueryHandler.cs:行号 28
+   在 Zephyr.Data.DbCommand.QuerySingle[TEntity](Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Command\PartialClasses\QuerySingle.cs:行号 12
+   在 Zephyr.Data.SelectBuilder`1.QuerySingle(Action`2 customMapper) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Data\Builders\Select\SelectBuilder.cs:行号 129
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 20:48:43,597 [9276] ERROR /login/doAction - System.Exception: 数据库不可用,请检查系统设置后重试！
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Web.Areas.Mms.Common.MmsService.LoginHandler(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Mms\Common\MmsService.cs:行号 69
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 41
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 20:56:18,026 [9276] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 20:56:18,063 [9276] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 20:56:18,071 [9276] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 20:56:23,428 [7908] ERROR /login/doAction - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 16
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:00:38,523 [11944] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 21:00:38,564 [11944] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 21:02:23,851 [11944] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:05:06,374 [10436] ERROR /login/doAction - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 16
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:06:27,481 [10700] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 21:06:27,516 [10700] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 21:10:54,361 [10700] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:12:34,897 [8168] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 21:12:34,941 [8168] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 21:14:46,856 [8168] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:16:59,579 [11716] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 21:17:28,535 [11716] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 21:17:36,040 [11716] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:23:52,389 [9004] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 21:23:52,431 [9004] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 21:24:23,686 [9004] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:25:32,804 [12792] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 21:25:32,804 [12792] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 21:25:32,817 [12792] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:31:06,990 [9168] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 21:31:07,031 [9168] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 21:32:12,956 [9168] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 21:42:21,259 [6624] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 21:42:21,303 [6624] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 21:45:08,889 [6624] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 23:18:41,387 [15004] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 23:18:41,396 [15004] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 23:18:41,427 [15004] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 23:20:33,650 [20444] DEBUG Servicesys_user - 获取实体对象
+2016-12-21 23:20:33,650 [20444] ERROR Servicesys_user - 获取实体对象失败
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 Zephyr.Core.Db.Provider(String providerName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 40
+   在 Zephyr.Core.Db.Context(String ConnName) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Core\Db.cs:行号 48
+   在 Zephyr.Core.ServiceBase`1.get_db() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBase.cs:行号 135
+   在 Zephyr.Core.ServiceBase`1.BuilderParse(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseUtils.cs:行号 53
+   在 Zephyr.Core.ServiceBase`1.<>c__DisplayClass70.<GetModel>b__6f() 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 44
+2016-12-21 23:20:33,655 [20444] ERROR /login/doAction - System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 Zephyr.Core.LogHelper.Logger(ILog log, String function, ErrorHandle errorHandleType, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Logs\LogHelper.cs:行号 54
+   在 Zephyr.Core.ServiceBase`1.Logger(String function, Action tryHandle, Action`1 catchHandle, Action finallyHandle) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseLog.cs:行号 23
+   在 Zephyr.Core.ServiceBase`1.GetModel(ParamQuery param) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Net\Zephyr.Core\Base\ServiceBaseQuery.cs:行号 51
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 24
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2016-12-21 23:20:48,666 [16624] ERROR /login/doAction - System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 Zephyr.Models.sys_userService.Login(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Areas\Sys\Models\sys_user.cs:行号 16
+   在 Zephyr.Controllers.LoginController.DoAction(JObject request) 位置 e:\BaiduYunDownload\asp.net+Web+mvc4.0 EasyUI 最新 权限管理系统源码教程\BN089-BS开发框架MVC4版\source20131023\Zephyr.Web\Controllers\LoginController.cs:行号 42
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
